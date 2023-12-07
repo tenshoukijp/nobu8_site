@@ -3,8 +3,8 @@ $content_hash = [
 	'401' =>
         [ 'html'=>'401.html', 'title'=>'ホーム' , 'dir'=>''],
 
-    'nobu_ssr_home' =>
-        [ 'html'=>'nobu_ssr_home.html', 'title'=>'トップページ' , 'dir'=>''],
+    'nobu_rpd_home' =>
+        [ 'html'=>'nobu_rpd_home.html', 'title'=>'トップページ' , 'dir'=>''],
 
     'nobu_mod_img_kahou' =>
         [ 'html'=>'nobu_mod_img_kahou.html', 'title'=>'家宝グラ' , 'dir'=>''],

@@ -12,7 +12,7 @@ $orgParamPage = getQueryParam('page');
 
 // デフォルトのページ
 if ( $urlParamPage == "" ) {
-    $urlParamPage = "nobu_spd_home";
+    $urlParamPage = "nobu_rpd_home";
 }
 
 if (! array_key_exists($urlParamPage, $content_hash) ) {
