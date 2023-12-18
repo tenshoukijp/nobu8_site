@@ -50,7 +50,7 @@ $strPageTemplate = preg_replace_callback("/(<img src=[\"'])([^\"']+?)([\"'])((\s
 
                                        // サイト内の画像
                                        } else {
-                                           $strTargetImageFileName = "/virtual/usr/public_html/xn--petw8uc11b.jp/" . $matches[2];
+                                           $strTargetImageFileName = "/virtual/usr/public_html//xn--9oqr43f8k1a.jp-mod.net/" . $matches[2];
 										   $strFullPathInfo = pathinfo( $strTargetImageFileName );
 										   $strPathInfoDirName = $strFullPathInfo["dirname"];
 										   $strPathInfoBaseName = $strFullPathInfo["basename"];
