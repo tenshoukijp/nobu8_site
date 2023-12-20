@@ -1,0 +1,39 @@
+<div class="content-box mb-3 content-lighten">
+  <h2><i class="fa fa-gavel fa-fw"></i>ムービーのOVERRIDE</h2>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>配置場所</h3>
+  <blockquote>OVERRIDE/*.AVI</blockquote>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>ムービー形式は 純粋なAVI形式である必要がある</h3>
+  <p>ffmpeg がやるようなコンテナだけaviにするといったやり方では、大抵再生できません。<br>
+  昔のゲームであり、かなり「狭義で純粋な.AVI形式ヘッダー」を持っている必要性があるためです。</p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>ファイル形式変換アプリの例</h3>
+  <ul>
+    <li>AviUtil(無料)で、.AVIに変換する</li>
+    <li>TMpegEnc(無料)で、.AVIに変換する</li>
+    <li>Adobe Premiere(高額)で、.AVIに変換する</li>
+    <li>Adobe AfterEffects(高額)で、.AVIに変換する</li>
+  </ul>
+  <p>などなど様々な方法があります。<br>
+  ffmpeg で単純に .avi にする、では大抵再生できないので注意してください。<br>
+  </p>
+  <p>天翔記のこちらの、<br>
+    <a href="https://天翔記.jp/?page=nobu_movie_convert">天翔記で利用可能な.AVIフォーマットへの変換方法</a><br>
+  に変換のヒントとなる情報が記載されています。<br>
+  </p>
+
+  <p>個人的には<mark>直接変換できない場合は、以下の方法がベスト</mark>かと思います。<br>
+    <ul>
+      <li>ffmpegで元動画から、無圧縮の.avi を作成(映像素材)</li>
+      <li>ffmpegで元動画から、無圧縮の.wav 音源を作成(音源素材)</li>
+    </ul>
+    <p>この<mark>２つをTMpegEncで読み込んで</mark>合体させた(必要に応じてcodecを入れた)動画を作成。<br>
+    この方法が純粋で古いAVIヘッダー形式となるため、一番安定するかと思います。</p>
+</div>

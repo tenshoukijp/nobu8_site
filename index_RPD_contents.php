@@ -15,6 +15,9 @@ $content_hash = [
     'nobu_mod_base_mod_override' =>
         [ 'html'=>'nobu_mod_base_mod_override.html', 'title'=>'烈風伝.mod' , 'dir'=>'OVERRIDE'],
 
+    'nobu_mod_base_mod_whats_override' =>
+        [ 'html'=>'nobu_mod_base_mod_whats_override.html', 'title'=>'烈風伝.mod' , 'dir'=>'OVERRIDE'],
+
     'nobu_mod_base_mod_override_bushou_pic' =>
         [ 'html'=>'nobu_mod_base_mod_override_bushou_pic.html', 'title'=>'烈風伝.mod' , 'dir'=>'OVERRIDE'],
 
@@ -46,7 +49,7 @@ $content_hash = [
         [ 'html'=>'nobu_mod_base_mod_javascript_bushou_pic.html', 'title'=>'烈風伝.mod' , 'dir'=>'JavaScript'],
 
     'nobu_mod_base_mod_javascript_kahou_pic' =>
-        [ 'html'=>'nobu_mod_base_mod_javascript_bushou_face.html', 'title'=>'烈風伝.mod' , 'dir'=>'JavaScript'],
+        [ 'html'=>'nobu_mod_base_mod_javascript_kahou_pic.html', 'title'=>'烈風伝.mod' , 'dir'=>'JavaScript'],
 
     'nobu_mod_base_mod_javascript_bgm' =>
         [ 'html'=>'nobu_mod_base_mod_javascript_bgm.html', 'title'=>'烈風伝.mod' , 'dir'=>'JavaScript'],
