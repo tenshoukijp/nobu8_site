@@ -1,0 +1,87 @@
+<div class="content-box mb-3 content-lighten">
+  <h2><i class="fa fa-gavel fa-fw"></i>武将や姫の顔グラ</h2>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>配置場所(通常の武将)</h3>
+  <blockquote>OVERRIDE/KAODATA/0000.bmp ～ 1676.bmp</blockquote>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>配置場所(姫)</h3>
+  <blockquote>OVERRIDE/HIMEDATA/0000.bmp ～ 0063.bmp</blockquote>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>KaoData.nb8 や HimeData.nb8 を配置することにも対応しているが...</h3>
+  <p>KaoData.nb8 や HimeData.nb8 に顔グラがあります、これを直接編集して、「OVERRIDE/KaoData.nb8」や「OVERRIDE/HimeData.nb8」として配置することにも<br>
+    もちろん対応はしていますが、<br>
+    そのような方法では「受け渡し」には便利かもしれませんが、実際に自分で顔グラを入れ替える、という意味では<br>
+    何がどう入れ替わったのか管理しにくいので不便でしょう。<br>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>KaoData.nb8の何番目が読み込まれたのか？ に対応する画像を用意する</h3>
+  0000.bmp ～ 1676.bmp ファイルを配置しておけば、そのファイルが優先的に採用されます。<br>
+  これは実際のゲーム内の顔番号であり、シナリオデータの顔番号でもあります。</p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>HimeData.nb8の何番目が読み込まれたのか？ に対応する画像を用意する</h3>
+  0000.bmp ～ 0063.bmp ファイルを配置しておけば、そのファイルが優先的に採用されます。<br>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>顔グラファイルは、フルカラーの「*.png」で管理を想定</h3>
+  <p>現代の画像編集アプリケーションは、Photoshop、あるいは、Gimpなどが中心ですが、<br>
+    いずれも、「BMPファイル」は扱いにくくなっています。<br>
+    基本的に「１枚のベタ画像」あるいは「アルファがあるベタ画像」の両方とも、「PNG形式」で扱うのが標準となっています。</p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>PNGファイル群を一括で「最適に減色して*.bmpにする」ツール「ColorReducer」</h3>
+  <p>OptPixを所持している人は、ここを読む必要はありません。次のパレットの項目に進んでください。</p>
+  <div class="card mb-3 ml-3" style="max-width: 30rem;">
+    <!-- カード本文：card-body -->
+    <div class="card-body text-center">
+      <div class="row">
+        <div class="col-12"><small>(github リポジトリ)</small></div>
+      </div>
+      <a href="https://github.com/tenshoukijp/nobu10_tool_colorreducer/releases" class="btn btn-primary"><i class="fa fa-download fa-fw"></i>ColorReducer.zip</a>
+        <fieldset class="alert alert-info">
+            <legend>ウィルスチェッカーが誤検知する場合</legend>
+            <p>ColorReducer.zip だとウィルスチェッカーが誤検知する、といった場合は、ColorReducer.tar、ColorReducer.gz、ColorReducer.7z などをダウンロードし、解凍を試みてください。<br>
+     全てでウィルスチェッカーが誤検知する、といったことは無いかと思われます。<br>
+        </fieldset>
+    </div>
+  </div>
+
+  <p>これは、もともとは、iZYINS というプログラムで、「xPadie」や「Yukari」の元となるアルゴリズムと同じ減色アルゴリズムを持ったものです。<br>
+    それをModで使いやすいように、「*.png」があれば、それを一括で減色して「*.bmp」する、という機能を付け加えたものとなります。<br>
+  <ul>
+    <li>元々の iZYINSのコマンドラインとしての引数も全て受け付けます</li>
+    <li>Optpixほどではないですが、今回のようなケースですと、かなり良い減色結果が得られます</li>
+    <li>Photoshopよりはやや綺麗、Gimpとは比較にならないほど美しい仕上がりとなります</li>
+  </ul>
+  </p>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>烈風伝の顔グラは全て共通の固定パレット256色なので、パレットが必要</h3>
+  <div class="card mb-3 ml-3" style="max-width: 30rem;">
+    <!-- カード本文：card-body -->
+    <div class="card-body text-center">
+      <div class="row">
+        <div class="col-12"><small>(github リポジトリ)</small></div>
+      </div>
+      <a href="https://github.com/tenshoukijp/nobu8_data_face/releases" class="btn btn-primary"><i class="fa fa-download fa-fw"></i>顔グラ用のカラーパレット</a>
+    </div>
+  </div>
+</div>
+
+<div class="content-box mb-3 content-lighten">
+  <h3>****.png と 同じフォルダに ColorReducer.exe と palette.bmp を配置して、ColorReducer.exeを実行</h3>
+  <img src="cnt_mod/cnt_mod_colorreducer_01.png">
+  <p>烈風伝では、<mark>全ての顔で共通の「固定256色パレット」</mark>での減色となるため、多少は粗が出ます。</p>
+  <img src="cnt_mod/cnt_mod_colorreducer_02.png">
+</div>
