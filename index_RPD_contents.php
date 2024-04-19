@@ -24,6 +24,9 @@ $content_hash = [
     'nobu_mod_base_mod_override_kahou_pic' =>
         [ 'html'=>'nobu_mod_base_mod_override_kahou_pic.html', 'title'=>'烈風伝.mod' , 'dir'=>'OVERRIDE'],
 
+    'nobu_mod_base_mod_override_kamon_pic' =>
+        [ 'html'=>'nobu_mod_base_mod_override_kamon_pic.html', 'title'=>'烈風伝.mod' , 'dir'=>'OVERRIDE'],
+
     'nobu_mod_base_mod_override_bgm' =>
         [ 'html'=>'nobu_mod_base_mod_override_bgm.html', 'title'=>'烈風伝.mod' , 'dir'=>'OVERRIDE'],
 
