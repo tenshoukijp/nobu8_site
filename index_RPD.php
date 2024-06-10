@@ -37,6 +37,7 @@ $strPageFileFullPath = $content_hash[$urlParamPage]['html'];
 $strPageTemplate = file_get_contents($strPageFileFullPath);
 
 $strPageDate = date('Y-m-d\TH:i:s', filectime($strPageFileFullPath));
+$strCurrentYear = date("Y");
 
 
 // まずBOMの除去
@@ -280,6 +281,7 @@ $strMLPMCustomUpdate = date("YmdHis", $timeMLPMCustomUpdate);
 $array_style    = array(
     "%(style_dynamic)s",
     "%(pagedate)s",
+    "%(year)s",
     "%(expand)s",
     "%(styleupdate)s",
     "%(fontpluginupdate)s",
@@ -294,6 +296,7 @@ $array_style    = array(
 $array_template = array(
     $strStyleTemplate,
     $strPageDate, 
+    $strCurrentYear,
     $strMenuExpand,
     $strStyleUpdate,
     $strFontPluginUpdate,
