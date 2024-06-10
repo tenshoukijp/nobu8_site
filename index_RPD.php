@@ -31,8 +31,13 @@ if ($_SERVER['HTTP_HOST']=="usr.s602.xrea.com") {
 }
 
 
+$strPageFileFullPath = $content_hash[$urlParamPage]['html'];
+
 // コンテンツのページテンプレート読み込み
-$strPageTemplate = file_get_contents($content_hash[$urlParamPage]['html']);
+$strPageTemplate = file_get_contents($strPageFileFullPath);
+
+$strPageDate = date('Y-m-d\TH:i:s', filectime($strPageFileFullPath));
+
 
 // まずBOMの除去
 $strPageTemplate = preg_replace('/^\xEF\xBB\xBF/', '', $strPageTemplate);
@@ -274,6 +279,7 @@ $strMLPMCustomUpdate = date("YmdHis", $timeMLPMCustomUpdate);
 // index内にある、スタイル、コンテンツ、階層の開きをそれぞれ、具体的な文字列へと置き換える
 $array_style    = array(
     "%(style_dynamic)s",
+    "%(pagedate)s",
     "%(expand)s",
     "%(styleupdate)s",
     "%(fontpluginupdate)s",
@@ -287,6 +293,7 @@ $array_style    = array(
 );
 $array_template = array(
     $strStyleTemplate,
+    $strPageDate, 
     $strMenuExpand,
     $strStyleUpdate,
     $strFontPluginUpdate,
