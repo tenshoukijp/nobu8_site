@@ -277,6 +277,11 @@ $strMLPMCSSUpdate = date("YmdHis", $timeMLPMCSSUpdate);
 $timeMLPMCustomUpdate = filemtime("./jquery/jquery.multilevelpushmenu.custom.min.js");
 $strMLPMCustomUpdate = date("YmdHis", $timeMLPMCustomUpdate);
 
+// パンくずリストJS
+$timeBreadCrumpUpdate = filemtime("jquery/multilevelpushmenu-breadcrump.js");
+$strBreadCrumpUpdate = date("YmdHis", $timeBreadCrumpUpdate);
+
+
 // index内にある、スタイル、コンテンツ、階層の開きをそれぞれ、具体的な文字列へと置き換える
 $array_style    = array(
     "%(style_dynamic)s",
@@ -291,6 +296,7 @@ $array_style    = array(
     "%(shcore_foot)s",
     "%(shcorecssupdate)s",
     "%(mathjax_foot)s",
+    "%(breadcrump)s",
     "%(content_dynamic)s"
 );
 $array_template = array(
@@ -306,6 +312,7 @@ $array_template = array(
     $strShCoreFooter,
     $strShcoreCSSUpdate,
     $strMathJaxCoreFooter,
+    $strBreadCrumpUpdate,
     $strPageTemplate
 );
 $strIndexEvaluated = str_replace($array_style, $array_template, $strIndexTemplate);

@@ -9,7 +9,7 @@
 <meta http-equiv="content-style-type" content="text/css">
 <meta name="description" content="烈風伝の改造">
 <meta name="author" content="翔.jp">
-<meta name="copyright" content="© 翔.jp">
+<meta name="copyright" content="© %(year)s 翔.jp">
 <meta name="date" content="%(pagedate)s">
 <link rel="shortcut icon" href="./favicon.ico">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
@@ -27,6 +27,7 @@
 <body class="sitebody">
 <div id="pushobj">
 <div id="eventpanel"></div>
+<div class="breadcrumbs"><pre id="breadcrump"></pre></div>
 <table style="margin: 0px; padding: 0px">
     <tr>
         <td class="content-box" style="margin:0px;padding:0px" width="1150">
@@ -96,5 +97,6 @@ function doMenuExpand() {
 %(shcore_foot)s
 %(mathjax_foot)s
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./jquery/multilevelpushmenu-breadcrump.js?v=%(breadcrump)s"></script>
 </body>
 </html>
