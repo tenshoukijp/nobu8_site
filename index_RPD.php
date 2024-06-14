@@ -36,9 +36,6 @@ $strPageFileFullPath = $content_hash[$urlParamPage]['html'];
 // コンテンツのページテンプレート読み込み
 $strPageTemplate = file_get_contents($strPageFileFullPath);
 
-$strPageDate = date('Y-m-d\TH:i:s', filectime($strPageFileFullPath));
-$strCurrentYear = date("Y");
-
 
 // まずBOMの除去
 $strPageTemplate = preg_replace('/^\xEF\xBB\xBF/', '', $strPageTemplate);
@@ -282,10 +279,26 @@ $timeBreadCrumpUpdate = filemtime("jquery/multilevelpushmenu-breadcrump.js");
 $strBreadCrumpUpdate = date("YmdHis", $timeBreadCrumpUpdate);
 
 
+// 最終更新日時関連
+$pageCTimeObj = filemtime($strPageFileFullPath);
+if (isset($filetime) && $filetime > $pageCTimeObj) {
+     $pageCTimeObj = $filetime;
+}
+$strPageDate = date('Y-m-d\TH:i:s', $pageCTimeObj);
+$strCurrentYear = date("Y");
+$strPageYMD = date('最終更新日 Y-m-d', $pageCTimeObj);
+// デフォルトのページ
+if ( $urlParamPage == "nobu_rpd_home" ) {
+    $strPageYMD = "";
+}
+
+
+
 // index内にある、スタイル、コンテンツ、階層の開きをそれぞれ、具体的な文字列へと置き換える
 $array_style    = array(
     "%(style_dynamic)s",
     "%(pagedate)s",
+    "%(pageymd)s",
     "%(year)s",
     "%(expand)s",
     "%(styleupdate)s",
@@ -302,6 +315,7 @@ $array_style    = array(
 $array_template = array(
     $strStyleTemplate,
     $strPageDate, 
+    $strPageYMD,
     $strCurrentYear,
     $strMenuExpand,
     $strStyleUpdate,
