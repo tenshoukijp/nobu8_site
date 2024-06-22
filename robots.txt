@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://xn--9oqr43f8k1a.jp-mod.net/sitemap.xml

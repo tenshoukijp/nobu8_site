@@ -1,6 +1,6 @@
 <?php
 
-require( "index_RPD_contents.php" );
+require( "contents.php" );
 
 $punnyAddress = "xn--9oqr43f8k1a.jp-mod.net";
 
