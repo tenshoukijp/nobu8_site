@@ -62,6 +62,11 @@ $content_hash = [
 
     'nobu_mod_base_mod_javascript_movie' =>
         [ 'html'=>'nobu_mod_base_mod_javascript_movie.html', 'title'=>'烈風伝.mod' , 'dir'=>'JavaScript'],
+
+
+    'nobu_site_the_profile' =>
+        [ 'html'=>'nobu_site_the_profile.html', 'title'=>'プロフィール' , 'dir'=>'コンタクト']
+
 ];
 
 
