@@ -1,0 +1,22 @@
+.nav-content {
+    background-image: url('web_img/menu_top_back.png');
+    background-repeat: no-repeat;
+}
+
+.hc-offcanvas-nav .nav-content>h2 {
+    color: #222;
+    text-shadow:0 0 1px #333, 0 0 1px #333;
+}
+
+/*
+.btn-primary {
+  background-color: #343a40 !important;
+  border-color: #343a40 !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: #212529 !important;
+  border-color: #212529 !important;
+}
+*/

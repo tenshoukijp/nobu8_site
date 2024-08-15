@@ -3,6 +3,9 @@ $content_hash = [
 	'401' =>
         [ 'html'=>'401.html', 'title'=>'ホーム' , 'dir'=>''],
 
+	'404' =>
+        [ 'html'=>'404.html', 'title'=>'ホーム' , 'dir'=>''],
+
     'nobu_rpd_home' =>
         [ 'html'=>'nobu_rpd_home.html', 'title'=>'トップページ' , 'dir'=>''],
 
